@@ -1,0 +1,381 @@
+/* https://colorlib.com/preview/#bakery */
+/*Regular selectors*/
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: -apple-system,BlinkMacSystemFont,
+		"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,
+		"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+header{
+	position: relative;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+ul{
+	list-style-type: none;
+}
+
+hr{
+	width: 94%;
+	height: .2px;
+	color: gray;
+}
+
+footer{
+	color: white;
+	background-color: #04091e;
+	margin-bottom: 0;
+	padding-top: 4em;
+	padding-bottom: 40px;
+}
+
+article{
+	width: 100%;
+}
+
+/*class selectors*/
+.sticky-header{
+	display: flex;
+	justify-content: space-between;
+	/*border: green solid 5px;*/
+	position: fixed;
+	background-color: white;
+	top: 0;
+	width: 100%;
+	box-shadow: 3px 3px 50px rgba(0,0,0,.3);
+}
+
+.nav-header{
+	display: flex;
+	align-self: flex-end;
+}
+
+.ul-header{
+	padding-right: 50px;
+	padding-top: 30px;
+	display: flex;
+	/*flex-wrap: wrap;*/
+	justify-content: space-around;
+	/*border: green solid 2px;*/
+	display: none;
+}
+
+.icon{
+	margin-left: 1.4rem;
+	align-self: center;
+}
+
+.ham-icon{
+	align-self: center;
+	position: absolute;
+	right: 10%;
+}
+
+.non-sticky-header{
+	margin-top: 70px;
+	height: 740px;
+	background: linear-gradient(rgba(0,0,0,.7),
+									rgba(0,0,0,.7)),
+						url('../images/Bread.jpg');
+	background-size: conver;
+	background-repeat: no-repeat;
+	background-position: 60% 100%;
+	color: white;
+	display: flex;
+	justify-content: center;
+}
+
+.non-sticky-inside{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.top-p{
+	padding-top: 4em; 
+	font-size: 1.5em;
+	letter-spacing: .1em;
+	margin-bottom: .1em;
+	text-transform: uppercase;
+}
+
+.bot-p{
+	margin-left: 5%;
+	margin-right: 5%;
+	line-height: 1.6;
+	font-size: 1.1em;
+	margin-top: .1em;
+}
+
+.mid-h1,
+.secondary-title{
+	margin-left: 5%;
+	margin-right: 5%;
+	line-height: 1.1;
+	font-size: 2.9em;
+	margin-top: .1em;
+	margin-bottom: .1em;
+}
+
+.header-button,
+.secondary-button{
+	color: white;
+	font-weight: bold;
+	border: solid transparent 1px;
+	padding: 1em 1.8em;
+	background-color: #d1ab7f;
+	letter-spacing: .05em; 
+	display: inline-block;
+	transition: all .5s ease 0s;
+	align-self: center;
+	text-transform: uppercase;
+	margin-top: 40px;
+}
+
+.secondary-content{
+	margin-left: 5%;
+	margin-right: 5%;
+	padding-bottom: 5em;
+}
+
+.secondary-topp{
+	color: #d1ab7f;
+	padding-top: 5em; 
+	font-size: 1.2em;
+	letter-spacing: .1em;
+	margin-bottom: .1em;
+	text-transform: uppercase;
+}
+
+.secondary-title{
+	font-size: 2em;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.secondary-midp{
+	line-height: 1.6;
+	font-size: 1.1em;
+	margin-top: 1.5em;
+}
+
+.secondary-botp{
+	line-height: 1.6;
+	font-size: .9em;
+	letter-spacing: .05em;
+}
+
+.menu{
+	padding-top: 5em;
+	text-align: center;
+	background-color: #f9f9ff;
+	width: 100%;
+}
+
+.menu-heading{
+	line-height: 1.1;
+	font-size: 2.9em;
+	margin-top: .1em;
+	margin-bottom: .1em;
+}
+.icons{
+	margin-bottom: 50px;
+}
+
+.icon-img{
+	filter: invert(100%);
+	margin-bottom:0; 
+}
+
+.about-us{
+	margin-right: 2.5%; 
+	margin-left: 5%;
+}
+.newsletter{
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+.icons{
+	margin-right: 5%;
+	margin-left: 2.5%;
+}
+
+/*Descendant selctors*/
+
+.ul-header li{
+	margin: 2em 1em; /*Change left right spacing to 1.5 at breakpoint*/
+	margin-top: 0;
+	flex-basis: 40px;
+}
+
+.non-sticky-inside p,
+	.non-sticky-inside h1{
+		text-align: center;
+}
+
+/*pseudo class?*/
+.header-button:hover,
+.secondary-button:hover{
+	background-color: transparent;
+	border: 1px solid white;
+	cursor: pointer;
+	transition: all .3s ease 0s;
+}
+
+.secondary-button:hover{
+	background-color: transparent;
+	border: 1px solid #d1ab7f;
+	cursor: pointer;
+	transition: all .3s ease 0s;
+	color: #d1ab7f;
+}
+
+.menu img{
+	border-radius: 50%;
+	transition: all .3s ease 0s;
+	padding: 10px;
+}
+
+.menu h4{
+	font-size: 1.3em;
+	margin-bottom: .3em;
+}
+
+.menu-items:hover img{
+	padding: 0;
+	transition: all .3s ease 0s;
+}
+
+.menu-items:hover{
+	color: #d1ab7f;
+	margin: 0;
+}
+
+.menu-items:hover p{
+	color: black;
+}
+
+.menu-items h4{
+	transition: all .3s ease 0s;
+}
+
+.menu p{
+	margin-bottom: 4em;
+	margin-top: 0;
+}
+
+.footer-div p{
+	margin-bottom: 50px;
+}
+
+
+@media(min-width: 400px){
+	.non-sticky-header{
+		height: 650px;
+	}
+}
+
+@media(min-width: 666px){
+	.ul-header{
+		display: flex;
+	}
+	.ham-icon{
+		display: none;
+	}
+	.non-sticky-header{
+		height: 600px;
+		margin-top: 112px;
+	}
+	.full-menu-div{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		
+	}
+	.bread,
+	.pizza,
+	.burgers,
+	.sandwiches{
+		width: 50%;
+	}
+	
+	.footer-div{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.about-us{
+		width: 40%;
+	}
+	.newsletter{
+		width: 45%;
+	}
+	.icons{
+		margin-left: 5%;
+	}
+	.non-sticky-inside{
+		max-width: 666px;
+	}
+}
+
+@media(min-width: 963px){
+	.non-sticky-header{
+		height: 550px;
+	}
+	.bread,
+	.pizza,
+	.burgers,
+	.sandwiches{
+		width: 25%;
+	}
+	.about-us,
+	.icons{
+		width: 30%;
+	}
+	.newsletter{
+		width: 20%;
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+	.footer-div{
+		flex-wrap: nowrap;
+	}
+	
+	.menu,
+	.secondary-content{
+		max-width: 963px;
+		margin-left: calc(100vw/2 - 481.5px);
+		margin-right: calc(100vw/2 - 481.5px);
+		
+	}
+	
+	.non-sticky-header-container{
+		background-color: #04091e;
+	}
+	article{
+		background-color: #f9f9ff;
+	}
+}
+
+@media(min-width: 1325px){
+	.non-sticky-header,
+	.footer-div{
+		max-width: 1325px;
+		margin-left: calc(100vw/2 - 662.5px); 
+		margin-right: calc(100vw/2 - 662.5px);
+	}
+	.sticky-header{
+		padding-left: calc(100vw/2 - 662.5px); 
+		padding-right: calc(100vw/2 - 662.5px);
+	}
+} 
